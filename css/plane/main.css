@@ -45,8 +45,25 @@ body main {
   flex-direction: column;
   align-items: center;
 }
-body main img {
+body main .logo {
   filter: brightness(0) saturate(100%) invert(88%) sepia(10%) saturate(614%) hue-rotate(185deg) brightness(96%) contrast(89%);
+  margin-bottom: 40px;
+}
+body main .sershBox {
+  background-color: #ffffff;
+  width: 20vw;
+  margin-bottom: 40px;
+}
+body main .tabCollection {
+  display: flex;
+  justify-content: space-between;
+  width: 202vw;
+  align-items: center;
+}
+body main .tabCollection .tabBox {
+  display: flex;
+  flex-direction: column;
+  width: 2vw;
 }
 body footer {
   display: flex;
