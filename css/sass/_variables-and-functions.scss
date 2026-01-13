@@ -1,0 +1,22 @@
+$bgColor: #383b43;
+$logoColor: #bac7e3;
+$wight: #ffffff;
+$darkenWight: #e0e2ec;
+$gray: #474648;
+$darkBlue: #3b475e;
+
+@mixin circle($diameter: 25px, $color: transparent) {
+    border-radius: 50%;
+    width: $diameter;
+    height: $diameter;
+    background-color: $color;
+}
+
+@mixin hover(){
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+@mixin solidColor($num: 100){
+    filter: brightness($num);
+    filter: brightness(0) invert(1);
+}

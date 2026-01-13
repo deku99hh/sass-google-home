@@ -1,0 +1,59 @@
+@import './variables-and-functions';
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: $bgColor;
+
+    header {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        flex-direction: row;
+        align-items: center;
+
+        margin-right: 10px;
+        padding-top: 10px;
+        .circle{
+            @include circle(20px, transparent);
+            
+            .dots-9{
+                @include solidColor();
+            }
+            margin-left: 18px;
+
+        }
+        .acount{
+            @include circle(35px, transparent);
+
+            img{
+                height: 100%;
+                @include circle(35px, transparent);
+            }
+        }
+
+        a{
+            margin-left: 15px;
+
+            text-decoration: none;
+            color: $wight;
+        }
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+            filter: brightness(0) saturate(100%) invert(88%) sepia(10%) saturate(614%) hue-rotate(185deg) brightness(96%) contrast(89%);
+        }
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+// --cr-searchbox-border-radius: calc(0.5 * var(--cr-searchbox-height));
