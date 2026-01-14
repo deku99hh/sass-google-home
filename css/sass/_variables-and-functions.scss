@@ -17,11 +17,14 @@ $darkBlue: #3b475e;
 
 }
 
-@mixin hover(){
-    background-color: rgba(255, 255, 255, 0.125);
+@mixin hover($color:rgba(255, 255, 255, 0.125)){
+    background-color: $color;
 }
 
-@mixin solidColor($num: 100){
-    filter: brightness($num);
+@mixin solidColorWight(){
     filter: brightness(0) invert(1);
+}
+
+@function get-google-blue-color(){
+    @return (brightness(0) saturate(100%) invert(88%) sepia(10%) saturate(614%) hue-rotate(185deg) brightness(96%) contrast(89%));
 }

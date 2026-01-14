@@ -30,7 +30,6 @@ body header .circle:hover {
   background-color: rgba(255, 255, 255, 0.125);
 }
 body header .circle .dots-9 {
-  filter: brightness(100);
   filter: brightness(0) invert(1);
 }
 body header .acount {
@@ -71,9 +70,13 @@ body main .logo {
   filter: brightness(0) saturate(100%) invert(88%) sepia(10%) saturate(614%) hue-rotate(185deg) brightness(96%) contrast(89%);
   margin-bottom: 40px;
 }
+@media (max-width: 500px) {
+  body main .logo {
+    height: 75px;
+  }
+}
 body main .sershBox {
   background-color: #ffffff;
-  width: 50rem;
   height: 48px;
   border-radius: 24px;
   display: grid;
@@ -81,12 +84,37 @@ body main .sershBox {
   align-items: center;
   padding-left: 20px;
   overflow: hidden;
+  width: 50rem;
   margin-bottom: 40px;
+}
+@media (max-width: 850px) {
+  body main .sershBox {
+    width: 40rem;
+  }
+}
+@media (max-width: 660px) {
+  body main .sershBox {
+    width: 480px;
+  }
+}
+@media (max-width: 500px) {
+  body main .sershBox {
+    width: 304px;
+  }
+}
+body main .sershBox button {
+  background-color: transparent;
+  border: 0;
 }
 body main .sershBox input {
   height: 100%;
   border: 0;
   font-size: 20px;
+}
+@media (max-width: 660px) {
+  body main .sershBox input {
+    font-size: 15px;
+  }
 }
 body main .sershBox svg {
   width: 20px;
@@ -113,6 +141,9 @@ body main .tabCollection .tabBox {
 }
 body main .tabCollection .tabBox:hover {
   background-color: rgba(255, 255, 255, 0.125);
+}
+body main .tabCollection .tabBox a {
+  text-decoration: none;
 }
 body main .tabCollection .tabBox .grayCircle {
   border-radius: 50%;
