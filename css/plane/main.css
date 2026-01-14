@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #383b43;
@@ -13,10 +18,16 @@ body header {
 }
 body header .circle {
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 18px;
+}
+body header .circle:hover {
+  background-color: rgba(255, 255, 255, 0.125);
 }
 body header .circle .dots-9 {
   filter: brightness(100);
@@ -27,6 +38,9 @@ body header .acount {
   width: 35px;
   height: 35px;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body header .acount img {
   height: 100%;
@@ -34,13 +48,21 @@ body header .acount img {
   width: 35px;
   height: 35px;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body header a {
   margin-left: 15px;
   text-decoration: none;
   color: #ffffff;
 }
+body header a:hover {
+  -webkit-text-decoration: revert;
+          text-decoration: revert;
+}
 body main {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,22 +73,77 @@ body main .logo {
 }
 body main .sershBox {
   background-color: #ffffff;
-  width: 20vw;
+  width: 50rem;
+  height: 48px;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: 30px 1fr 46px 30px 135px;
+  align-items: center;
+  padding-left: 20px;
+  overflow: hidden;
   margin-bottom: 40px;
+}
+body main .sershBox input {
+  height: 100%;
+  border: 0;
+  font-size: 20px;
+}
+body main .sershBox svg {
+  width: 20px;
+  margin-right: 20px;
+}
+body main .sershBox img {
+  border-radius: 20px;
 }
 body main .tabCollection {
   display: flex;
   justify-content: space-between;
-  width: 202vw;
   align-items: center;
+  flex-direction: row-reverse;
 }
 body main .tabCollection .tabBox {
   display: flex;
   flex-direction: column;
-  width: 2vw;
+  width: 112px;
+  height: 112px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-around;
+  color: #ffffff;
 }
-body footer {
+body main .tabCollection .tabBox:hover {
+  background-color: rgba(255, 255, 255, 0.125);
+}
+body main .tabCollection .tabBox .grayCircle {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background-color: #474648;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+}
+body main .tabCollection .tabBox .grayCircle img {
+  height: 30px;
+}
+body footer div {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background-color: #3b475e;
+  color: #e0e2ec;
+  padding: 7px 20px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 1px 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body footer div p {
+  margin-left: 8px;
+  font-size: 15px;
+}
+body footer div svg {
+  fill: #e0e2ec;
+  width: 21px;
 }/*# sourceMappingURL=main.css.map */

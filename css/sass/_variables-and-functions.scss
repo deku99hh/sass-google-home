@@ -10,10 +10,15 @@ $darkBlue: #3b475e;
     width: $diameter;
     height: $diameter;
     background-color: $color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 @mixin hover(){
-    background-color: rgba(255, 255, 255, 0.37);
+    background-color: rgba(255, 255, 255, 0.125);
 }
 
 @mixin solidColor($num: 100){

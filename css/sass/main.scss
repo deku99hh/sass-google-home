@@ -1,5 +1,10 @@
 @import './variables-and-functions';
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
 
@@ -15,10 +20,15 @@ body{
         margin-right: 10px;
         padding-top: 10px;
         .circle{
-            @include circle(20px, transparent);
-            
+            @include circle(35px, transparent);
+
+            &:hover{
+                    @include hover();
+                }
+
             .dots-9{
                 @include solidColor();
+
             }
             margin-left: 18px;
 
@@ -37,10 +47,16 @@ body{
 
             text-decoration: none;
             color: $wight;
+
+            &:hover{
+                text-decoration: revert;
+            }
         }
     }
 
     main {
+        margin-top: 100px;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -52,7 +68,32 @@ body{
 
         .sershBox{
             background-color: $wight;
-            width: 20vw;
+            width: 50rem;
+            height: 48px;
+            border-radius: 24px;
+            display: grid;
+            grid-template-columns: 30px 1fr 46px 30px 135px;
+            align-items: center;
+            // gap: 20px;
+            padding-left: 20px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            overflow: hidden;
+
+            input{
+                height: 100%;
+                border: 0;
+                font-size: 20px;
+            }
+            svg{
+                width: 20px;
+                margin-right: 20px;
+            }
+            img{
+                border-radius: 20px;
+                // margin-left: -50px;
+            }
             // ==================================================
             margin-bottom: 40px;
         }
@@ -60,22 +101,63 @@ body{
         .tabCollection{
             display: flex;
             justify-content: space-between;
-            width: 202vw;
+            // width: 202vw;
             align-items: center;
+            flex-direction: row-reverse;
 
             .tabBox{
                 display: flex;
                 flex-direction: column;
 
-                width: 2vw;
+                width: 112px;
+                height: 112px;
+                border-radius: 5px;
+
+                align-items: center;
+                justify-content: space-around;
+
+                color: $wight;
+
+                &:hover{
+                    @include hover();
+                }
+
+                .grayCircle{
+                    @include circle(55px, $gray);
+
+                    img{
+                        height: 30px;
+                    }
+                }
             }
         }
     }
 
     footer {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        
+        div{
+            
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            background-color: $darkBlue;
+            color: $darkenWight;
+            padding: 7px 20px;
+            border-radius: 25px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 1px 2px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            p{
+                margin-left: 8px;
+                font-size: 15px;
+            }
+
+            svg{
+                fill: $darkenWight;
+                width: 21px;
+            }
+        }
     }
 }
-// --cr-searchbox-border-radius: calc(0.5 * var(--cr-searchbox-height));
